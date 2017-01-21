@@ -49,9 +49,9 @@ class AddEvent extends React.Component {
 	render() {
 
 		let StyleObj = {
-			top: this.state.toggle ? '62px' : '-400px',
-			WebkitTransition: 'top .7s ease',
-			MozTransition: 'top .7s ease'
+			top: this.state.toggle ? '62px' : '-500px',
+			WebkitTransition: 'top .5s ease',
+			MozTransition: 'top .5s ease'
 		}
 
 		// Toggle show / hide icon

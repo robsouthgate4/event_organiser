@@ -48,7 +48,11 @@ class App extends Component {
 		}
 
 		const mappedEvents = events.map((item, index) => {
-			return <EventsList whichItem={ index } key={ index } singleItem= { item } ></EventsList>
+			return <EventsList 
+						whichItem={ index } 
+						key={ index } 
+						singleItem= { item } >
+					</EventsList>
 		});
 
 		if ( eventsFetched ) {
@@ -59,13 +63,14 @@ class App extends Component {
 			<div className="container">
 				{ addEventContainer }
 				<ul className="list-group">
-				<ReactCSSTransitionGroup
-					transitionName="example"
-					transitionEnterTimeout={500}
-					transitionLeaveTimeout={300}>
-					{ mappedEvents }
-				</ReactCSSTransitionGroup>
+					<ReactCSSTransitionGroup
+						transitionName="example"
+						transitionEnterTimeout={500}
+						transitionLeaveTimeout={300}>
+						{ mappedEvents }
+					</ReactCSSTransitionGroup>
 				</ul>
+				<Calendar></Calendar>
 			</div>
 		)
 	}
